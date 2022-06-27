@@ -1,10 +1,8 @@
-# Three.js Journey
+# Three.js Sandbox
+
+This is my public Three JS sandbox where I learn ThreeJS.
 
 ## Setup
-
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
-
 ```bash
 # Install dependencies (only the first time)
 npm install
