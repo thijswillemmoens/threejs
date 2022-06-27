@@ -2,7 +2,7 @@
 
 This is my public Three JS sandbox where I learn ThreeJS.
 
-[![Follow @thijsmoens on Twitter](https://img.shields.io/badge/THIJSMOENS-gray.svg?colorA=6cc24a&colorB=6cc24a&style=flat)](https://twitter.com/thijsmoens/)
+[![Follow @thijsmoens on Twitter](https://img.shields.io/badge/THIJSMOENS-gray.svg?colorA=3d3d3d&colorB=2d2d2d&style=flat)](https://twitter.com/thijsmoens/)
 
 
 ## Setup
