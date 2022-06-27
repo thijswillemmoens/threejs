@@ -1,5 +1,7 @@
 # Three.js Sandbox
 
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=thijsmoens)
+
 This is my public Three JS sandbox where I learn ThreeJS.
 
 ## Setup
