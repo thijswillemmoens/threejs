@@ -5,9 +5,9 @@ import * as THREE from 'three';
 const scene = new THREE.Scene();
 
 // Create a red cube
-const geometry = new THREE.BoxGeometry(1,1,1);
-const material = new THREE.MeshBasicMaterial( { color: '#a08f68' } );
-const mesh = new THREE.Mesh( geometry, material );
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: '#a08f68' });
+const mesh = new THREE.Mesh(geometry, material);
 
 // Give the Mesh a starting position
 // mesh.position.x = 0.7;
@@ -17,18 +17,17 @@ const mesh = new THREE.Mesh( geometry, material );
 // You can set the starting position with set
 mesh.position.set(0.7, -0.6, 1);
 
-scene.add( mesh );
+scene.add(mesh);
 
 // Add an Axehelper for better 3D modeling
 const axesHelper = new THREE.AxesHelper(2); // parameter is the size of the helper
-scene.add( axesHelper );
-
+scene.add(axesHelper);
 
 // Sizes for aspect ratio
 const sizes = {
     width: 800,
-    height: 600
-}
+    height: 600,
+};
 
 // Initialize the Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
