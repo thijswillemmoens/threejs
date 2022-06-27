@@ -1,8 +1,9 @@
 # Three.js Sandbox
 
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=thijsmoens)
-
 This is my public Three JS sandbox where I learn ThreeJS.
+
+[![Follow @thijsmoens on Twitter](https://img.shields.io/badge/THIJSMOENS-gray.svg?colorA=6cc24a&colorB=6cc24a&style=flat)](https://twitter.com/thijsmoens/)
+
 
 ## Setup
 ```bash
