@@ -4,6 +4,38 @@ import * as THREE from 'three';
 // Create a scene
 const scene = new THREE.Scene();
 
+// Objects
+const group = new THREE.Group();
+group.position.y = 1; // change all objects in the group
+scene.add(group);
+
+const cube1 = new THREE.Mesh(
+    new THREE.BoxGeometry(1,1,1),
+    new THREE.MeshBasicMaterial({ color: 0xff000 })
+);
+
+group.add(cube1);
+
+const cube2 = new THREE.Mesh(
+    new THREE.BoxGeometry(1,1,1),
+    new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+);
+
+cube2.position.x = -2;
+group.add(cube2);
+
+const cube3 = new THREE.Mesh(
+    new THREE.BoxGeometry(1,1,1),
+    new THREE.MeshBasicMaterial({ color: 0x0000ff })
+);
+
+cube2.position.x = 2;
+group.add(cube3);
+
+// Add an Axehelper for better 3D modeling
+const axesHelper = new THREE.AxesHelper(2); // parameter is the size of the helper
+scene.add(axesHelper);
+
 // Create a red cube
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: '#a08f68' });
@@ -17,11 +49,14 @@ const mesh = new THREE.Mesh(geometry, material);
 // You can set the starting position with set
 mesh.position.set(0.7, -0.6, 1);
 
-scene.add(mesh);
+// Scale the cube to better format
+mesh.scale.set(2, 0.5, 0.5);
 
-// Add an Axehelper for better 3D modeling
-const axesHelper = new THREE.AxesHelper(2); // parameter is the size of the helper
-scene.add(axesHelper);
+// Rotate the cube
+mesh.rotation.reorder('YXZ'); // First reorder and then rotate
+mesh.rotation.y = Math.PI; // PI!!
+
+scene.add(mesh);
 
 // Sizes for aspect ratio
 const sizes = {
@@ -33,6 +68,8 @@ const sizes = {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
 scene.add(camera);
+
+camera.lookAt(mesh.position);
 
 // Create renderer
 const canvas = document.querySelector('.webgl');
